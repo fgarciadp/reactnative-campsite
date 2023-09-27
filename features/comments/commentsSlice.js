@@ -20,8 +20,8 @@ export const postComment = createAsyncThunk(
     async (payload, { dispatch, getState }) => {
         setTimeout(() => {
             const { comments } = getState();
-            payload.date.toISOSString();
-            payload.id === comments.commentsArray.length;
+            payload.date.toISOSString(); //! You need to create a date object first before creating the date property
+            payload.id === comments.commentsArray.length; //! You simply creating boolean here instead of adding the id property
             dispatch(addComment(payload));
         }, 2000);
     }
